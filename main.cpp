@@ -41,7 +41,7 @@ int main(){
 
             if (event.type == sf::Event::MouseButtonPressed){
                 clickPos = sf::Mouse::getPosition(window);
-                b.flipCell(sf::Vector2u(clickPos.x / TSIZE, clickPos.y / TSIZE));
+                b.flipCell(sf::Vector2u((clickPos.x / TSIZE) + 2, (clickPos.y / TSIZE) + 2));
                 window.clear();
                 b.displayBoard(&window, XSIZE, YSIZE);
             }

@@ -90,7 +90,7 @@ void Board::displayBoard(sf::RenderWindow *rw, int xsize, int ysize){
         for (unsigned int y = 1; y < (curr[0].size()) - 1; y++){
             if (curr[x][y] > 0){
                 currentShape = sf::RectangleShape(sf::Vector2f(tsize, tsize));
-                currentShape.setPosition(tsize * x, tsize * y);
+                currentShape.setPosition(tsize * (x - 2), tsize * (y - 2));
                 rw->draw(currentShape);
             }
         }
